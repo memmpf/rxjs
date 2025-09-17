@@ -80,6 +80,7 @@
     "*.{js,css,md}": "prettier --write"
   },
   "scripts": {
+    "prepare": "tsc -b ./src/tsconfig.cjs.json ./src/tsconfig.cjs.spec.json ./src/tsconfig.esm.json ./src/tsconfig.esm5.json ./src/tsconfig.esm5.rollup.json ./src/tsconfig.types.json ./src/tsconfig.types.spec.json ./spec/tsconfig.json",
     "changelog": "npx conventional-changelog-cli -p angular -i CHANGELOG.md -s",
     "build:spec:browser": "echo \"Browser test is not working currently\" && exit -1 && webpack --config spec/support/webpack.mocha.config.js",
     "lint_spec": "tslint -c spec/tslint.json -p spec/tsconfig.json \"spec/**/*.ts\"",
